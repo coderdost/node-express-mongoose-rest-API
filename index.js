@@ -65,4 +65,5 @@ app.delete('/notes/:id', function (req, res) {
 
 app.listen(port, function () {
   console.log('server started at :', port);
+  console.log('mongo URL',url);
 });
