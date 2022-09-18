@@ -28,7 +28,7 @@ mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true });
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function () {
-  console.log('MONGODB CONNECTEDD');
+  console.log('MONGODB CONNECTED');
 });
 
 app.use(express.static('build'));
@@ -65,5 +65,5 @@ app.delete('/notes/:id', function (req, res) {
 
 app.listen(port, function () {
   console.log('server started at :', port);
-  console.log('mongo URL',url);
+//   console.log('mongo URL',url);
 });
